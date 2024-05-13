@@ -1,38 +1,252 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  transition-duration: 1;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.det{
   display: flex;
-  flex-direction: column;
+  gap: 5px;
+  align-content: end;
+}
+.details{
+  padding: 20px;
+}
+.toggle{
+  justify-self: end;
+  display: flex;
+  
+  cursor:pointer;
+  align-content: end;
   align-items: center;
+  align-self: end;
+  gap: 10px;
+}
+
+.navbar{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+  justify-content: space-between;
+}
+.toggle:hover{
+  font-size: 18px;
+}
+.filt{
+  padding: 50px;
+}
+.filter{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.menu{
+  justify-self: end;
+}
+.countries{
+  padding-top: 50px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  grid-column-gap: 2%;
+  grid-row-gap: 0.1% ;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+.country{
+  width: 100%;
+  height: 400px;
+  justify-self: start;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  border-radius: 0.5cm;
+  box-shadow: 3px 1px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 3px 1px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 1px 5px 0px rgba(0,0,0,0.75);
 
-.App-link {
-  color: #61dafb;
 }
+.country h5{
+  font-size: 15px;
+}
+.country:hover{
+  cursor: pointer;
+  border: 2px;
+  border-color: blanchedalmond;
+  border-style: solid;
+}
+.flag{
+  border-top-left-radius: 0.5cm;
+  border-top-right-radius: 0.5cm;
+  height: 200px;
+  width: 100%;
+}
+.flag2{
+  width: 95%;
+  box-shadow: 3px 1px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 3px 1px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 1px 5px 0px rgba(0,0,0,0.75);
+}
+.about{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+  animation-name: anime; 
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode:  backwards;
+  align-content: end;
+  align-items: end;
+}
+.bout{
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.bout-name{
+  padding-bottom: 5px;
+}
+.domain{
+  align-self: center;
+}
+@media(max-width:1120px){
+  .flag2{
+    width: 90%;
+  }
+  .det, .det h5{
+    font-size: 15px;
+  }
+  .bout{
+    align-self: self-end;
+  }
+  .bout-name{
+    font-size: 18px;
+  }
+}
+@media(max-width:1000px){
+  .countries{
+    grid-template-columns: 30% 30% 30%;
+    
+  }
+}
+@media(max-width:900px){
+  .flag2{
+    width: 90%;
+  }
+  .det, .det h5{
+    font-size: 14px;
+  }
+  .bout{
+    align-self: self-end;
+  }
+  .bout-name{
+    font-size: 15px;
+  }
+}
+@media(max-width:750px){
+  .det, .det h5{
+    font-size: 13px;
+  }
+  .bout{
+    align-self: self-end;
+  }
+  .bout-name{
+    font-size: 14px;
+  }
+  .countries{
+    grid-column-gap: 5%;
+    grid-row-gap: 0.05% ;
+    grid-template-columns: 32% 32% 32%;
+  }
+  .navbar h3{
+    font-size: 19px;
+  }
+  .navbar h4{
+    font-size: 17px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+}
+@media(max-width:700px){
+  .countries{
+    grid-template-columns: repeat(2,1fr);  
+    grid-column-gap: 5%;
+    grid-row-gap: 0.05% ;
   }
+  .country{
+    height: 300px;
+    
+  }
+  .country h5{
+    font-size: 12px;
+  }
+  .flag{
+    height: 150px;
+  }
+  .det, .det h5{
+    font-size: 12px;
+  }
+  .bout{
+    align-self: self-end;
+  }
+  .bout-name{
+    font-size: 12px;
+  }
+  .navbar h3{
+    font-size: 17px;
+  }
+  .navbar h4{
+    font-size: 15px;
+
+  }
+}
+@media(max-width:609px){
+  .countries{
+    justify-content: center;
+    grid-template-columns: 95%;  
+    grid-column-gap: 5%;
+    grid-row-gap: 0.05% ;
+  }
+  .country{
+    height: 350px;
+  }
+  .country h5{
+    font-size: 10px;
+  }
+  .flag{
+    height: 200px;
+  }
+  .filter{
+    grid-row-gap: 20px;
+    grid-template-columns: 95%;
+    justify-content: center;
+
+  }
+  form, .menu{
+    grid-column: span;
+    justify-self: stretch;
+    
+    width: 100%;
+    grid-column:1/2
+  }
+  input{
+    width: 100%;
+  }
+  .drop{
+    width: 100%;
+  }
+  .about,.bout{
+    grid-template-columns: 90%;
+    grid-row-gap: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .flag2{
+    width: 100%;
+  }
+  .navbar h3{
+    font-size: 15px;
+  }
+  .navbar h4{
+    font-size: 13px;
+
+  }
+}
+@keyframes anime {
+  from{transform: translateX(-1200px)}
+  to{transform: translateX(0px)}
 }
