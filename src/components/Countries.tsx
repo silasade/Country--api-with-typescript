@@ -28,7 +28,7 @@ export const Countries=()=>{
                     <div>
                         <span className="det1"><span>Population:</span><h5>{item.population}</h5></span>
                         <span className="det1"><span>Region:</span><h5>{item.region}</h5></span>
-                        <span className="det1"><span>Capital:</span><h5>{item.capital}</h5></span>
+                      <span className="det1"><span>Capital:</span><h5>{item.capital}</h5></span>
                     </div>
                 </div>
             </div>
@@ -44,6 +44,9 @@ export const Countries=()=>{
     },[])
     const myCountries1=data.map((item,index)=>{
         return(
+
+           
+
             <div className="country" style={{backgroundColor: themecontext?.theme? "white": backgroundContext.dark.primary}} key={index}>
                 <div>
                     <img className="flag" src={item.flags.png}/>
@@ -62,7 +65,7 @@ export const Countries=()=>{
         )
     })
     return (
-        <div className="countries">
+        <div className="countries"  style={{ backgroundColor: themecontext?.theme ? backgroundContext.light.secondary : backgroundContext.dark.secondary, color: themecontext?.theme ? backgroundContext.light.primary : backgroundContext.light.secondary }}>
             {filter.length>0? myCountries: myCountries1}
         </div>
     )

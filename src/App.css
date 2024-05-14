@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 *{
   margin: 0;
-  transition-duration: 0.19ms;
   transition-timing-function: ease-in-out;
 }
 .det, .det1{
@@ -28,6 +27,19 @@
   grid-template-columns: repeat(2, 1fr);
   padding: 50px;
   justify-content: space-between;
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+.filter{
+  position: fixed;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    padding: 50px;
 }
 .toggle:hover{
   font-size: 18px;
@@ -43,13 +55,15 @@
   justify-self: end;
 }
 .countries{
-  padding-top: 50px;
+  padding-top: 180px;
   padding-bottom: 10px;
   display: grid;
   grid-template-columns: 23% 23% 23% 23%;
   grid-column-gap: 2%;
   grid-row-gap: 0.1% ;
   justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .country{
   width: 100%;
@@ -250,7 +264,7 @@ input{
 @media(max-width:609px){
   .countries{
     justify-content: center;
-    grid-template-columns: 98%;  
+    grid-template-columns: 95%;  
     grid-column-gap: 5%;
     grid-row-gap: 0.05% ;
   }
@@ -325,6 +339,19 @@ input{
   font-size: 13px;
 
 }
+.filter{
+  position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    padding: 10px;
+}
+.countries{
+  width: 100%;
+  padding: 10px;
+  padding-top: 150px;
+}
 }
 @media(max-width:420px){
   .country h5,.country{
@@ -381,6 +408,19 @@ input{
 }
 .country{
   height: 350px;
+}
+.filter{
+  position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    padding: 10px;
+}
+.countries{
+  width: 100%;
+  padding: 10px;
+  padding-top: 120px;
 }
 }
 

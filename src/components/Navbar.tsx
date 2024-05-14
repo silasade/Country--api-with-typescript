@@ -4,6 +4,8 @@ import { AuthTheme } from "./contexts/ThemeContext";
 import { BackgroundContext } from "./contexts/BackgroundContext";
 import moon from "./images/moon.svg"
 import sun from "./images/brightness-high.svg"
+import { Filter } from "./Filter"
+
 function Navbar(){
     const themecontext=useContext(ThemeContext)
     const backgroundContext=useContext(BackgroundContext)
@@ -16,6 +18,7 @@ function Navbar(){
     }
     console.log(theme)
     return(
+        <>
         <div className="navbar" style={{backgroundColor: theme? "white": backgroundContext.dark.primary, color:theme? backgroundContext.light.primary:backgroundContext.light.secondary}}>
             <div>
                 <h3 className="logo">Where in the world?</h3>
@@ -25,6 +28,8 @@ function Navbar(){
                 <h4 className="mode">{theme? backgroundContext.light.text: backgroundContext.dark.text}</h4>
             </div>
         </div>
+        
+        </>
     )
 }
 export default Navbar;

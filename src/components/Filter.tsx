@@ -77,8 +77,8 @@ export const Filter = () => {
     };
     console.log(showNotification)
     return (
-        <div className="filt" style={{ backgroundColor: themeContext?.theme ? backgroundContext.light.secondary : backgroundContext.dark.secondary, color: themeContext?.theme ? backgroundContext.light.primary : backgroundContext.light.secondary }}>
-            <div className="filter">
+        <div className="filt" >
+            <div className="filter" style={{ backgroundColor: themeContext?.theme ? backgroundContext.light.secondary : backgroundContext.dark.secondary, color: themeContext?.theme ? backgroundContext.light.primary : backgroundContext.light.secondary }}>
                <div>
                 <Autosuggest
                         suggestions={suggestions}
@@ -110,7 +110,6 @@ export const Filter = () => {
                     <Menu country={countries} />
                 </div>
             </div>
-            <Countries />
         </div>
     );
 };

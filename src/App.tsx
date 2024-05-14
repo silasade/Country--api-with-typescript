@@ -9,6 +9,7 @@ import { RegionContextProvider } from './components/contexts/RegionContext';
 import { BrowserRouter } from 'react-router-dom';
 import { Route,Routes } from 'react-router-dom';
 import { Country } from './components/Country';
+import { Countries } from './components/Countries';
 function App() {
   return (
     <BrowserRouter>
@@ -16,8 +17,9 @@ function App() {
       <BackgroundContextProvider>
         <RegionContextProvider>
         <Navbar/>
+        <Filter/>
           <Routes>
-          <Route path='/' element={<Filter/>} />
+          <Route path='/' element={<Countries/>} />
           <Route path='/Country' element={<Country/>} />
           </Routes>
           
