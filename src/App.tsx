@@ -23,15 +23,13 @@ function App() {
     const show=(localStorage.getItem("filter"))
     setShowFilter(show?JSON.parse(show): filterContext.Filter)
   },[filterContext.Filter])
-  const show=localStorage.getItem("filter")
-  console.log(localStorage.getItem("filter"))
   return (
     <BrowserRouter>
       <ThemeContextProvider>
         <BackgroundContextProvider>
           <RegionContextProvider>
             <Navbar />
-            {!showFilter && <Filters/>}
+            {(!showFilter) && <Filters/>}
             <Routes>
               <Route path='/' element={<Countries />} />
               <Route path='/Country' element={<Country />} />

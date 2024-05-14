@@ -10,7 +10,7 @@ export const Countries=()=>{
     const themecontext=useContext(ThemeContext)
     const backgroundContext=useContext(BackgroundContext)
     const filterContext=useContext(FilterContext)
-
+    
     if (!filterContext){
         throw new Error("Region does not exist")
     }

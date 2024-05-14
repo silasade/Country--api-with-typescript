@@ -7,7 +7,14 @@ import { ThemeContext } from './contexts/ThemeContext';
 import { BackgroundContext } from './contexts/BackgroundContext';
 import { useNavigate } from 'react-router-dom';
 import Notification from './Notification';
+import { FilterContext } from "./contexts/Filter"
+
 export const Filters = () => {
+    const filterContext = useContext(FilterContext);
+    if (!filterContext){
+        throw new Error("Region does not exist")
+    }
+    const {Filter, setFilter}=filterContext
     const themeContext = useContext(ThemeContext);
     const backgroundContext = useContext(BackgroundContext);
     const [value, setInput] = useState<string | null>(null);
@@ -55,7 +62,7 @@ export const Filters = () => {
     };
     const handleKeyPress = (event:React.KeyboardEvent<HTMLElement>) => {
         if (event.key === 'Enter') {
-            localStorage.setItem("filter", JSON.stringify(true))
+            
 
             let enteredValue:string
             if(typeof value==="string"){
@@ -72,6 +79,8 @@ export const Filters = () => {
             if (matchingCountry) {
                 
                 navigate("/country");
+                setFilter(!Filter)
+                localStorage.setItem("filter", JSON.stringify(true))
             } else {
                 setShowNotification(true);
             }

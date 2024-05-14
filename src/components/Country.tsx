@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { ThemeContext } from "./contexts/ThemeContext"
 import { BackgroundContext } from "./contexts/BackgroundContext"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { FilterContext } from "./contexts/Filter"
 
 export function Country() {
@@ -13,6 +13,9 @@ export function Country() {
         throw new Error("Region does not exist")
     }
     const { Filter, setFilter } = filterContext
+    useEffect(()=>{
+        localStorage.setItem("filter",JSON.stringify(true))
+    },[])
     type mycountry = {
         flag: string
         name: string
