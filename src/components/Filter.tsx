@@ -105,7 +105,7 @@ export const Filter = () => {
                         }}
                     />
                 </div>
-                {showNotification && <Notification show={showNotification} setShow={showNotification} country={searched}/>}
+                {showNotification && <Notification show={showNotification} setShow={()=>setShowNotification(!showNotification)} country={searched}/>}
                 <div className="menu">
                     <Menu country={countries} />
                 </div>

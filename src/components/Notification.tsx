@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { ThemeContext } from './contexts/ThemeContext';
+import { BackgroundContext } from './contexts/BackgroundContext';
 type NotificationProp={
     show:boolean
-    setShow:boolean
+    setShow: (show: boolean) => void;
     country:string
 }
 function Notification({show,setShow, country}:NotificationProp) {
+    const themecontext=useContext(ThemeContext)
+    const backgroundContext=useContext(BackgroundContext)
     const [shows,setShows]=useState(show)
     function handleHide(){
         setShows(false)
@@ -16,17 +20,18 @@ function Notification({show,setShow, country}:NotificationProp) {
     
       <Modal
         size="sm"
-        show={shows}
-        onHide={handleHide}
+        show={show}
+        onHide={()=>setShow(false)}
         aria-labelledby="example-modal-sizes-title-sm"
         centered
+        
       >
         <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-sm">
+          <Modal.Title id="example-modal-sizes-title-sm" >
             Error
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body >
             {country} not found
         </Modal.Body>
       </Modal>
