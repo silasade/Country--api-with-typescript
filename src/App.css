@@ -255,7 +255,7 @@ input{
     grid-row-gap: 0.05% ;
   }
   .country{
-    height: 420px;
+    height: 450px;
     
   }
   .details{
@@ -302,10 +302,24 @@ input{
     font-size: 13px;
 
   }
+  .filt{
+    padding: 10px;
+  
+    grid-row-gap: 20px;
+    grid-template-columns: 99%;
+    justify-content: center;
+  
+}
+.navbar{
+  padding: 10px;
+}
+.countries{
+  padding-top: 15px;
+}
 }
 @media(max-width:420px){
   .country h5,.country{
-    font-size: 20px;
+    font-size: 15px;
   }
   .country{
     height: 400px;
