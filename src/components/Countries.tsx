@@ -26,9 +26,9 @@ export const Countries=()=>{
                         <h4 onClick={()=>handleCountry(item)} className="name">{item.name}</h4>
                     </div>
                     <div>
-                        <span className="det"><span>Population:</span><h5>{item.population}</h5></span>
-                        <span className="det"><span>Region:</span><h5>{item.region}</h5></span>
-                        <span className="det"><span>Capital:</span><h5>{item.capital}</h5></span>
+                        <span className="det1"><span>Population:</span><h5>{item.population}</h5></span>
+                        <span className="det1"><span>Region:</span><h5>{item.region}</h5></span>
+                        <span className="det1"><span>Capital:</span><h5>{item.capital}</h5></span>
                     </div>
                 </div>
             </div>
