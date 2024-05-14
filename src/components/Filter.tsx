@@ -77,10 +77,15 @@ export const Filters = () => {
     };
     console.log(showNotification)
     const style: React.CSSProperties | undefined={
-       
-            color:themeContext?.theme ? backgroundContext.light.primary : backgroundContext.light.secondary 
-
-        
+        backgroundColor: themeContext?.theme? "white": backgroundContext.dark.primary,
+            color:themeContext?.theme ? backgroundContext.light.primary : backgroundContext.light.secondary,
+            border:'0px',
+            boxShadow: '-1px 0px 5px 0px rgba(0,0,0,0.75)',
+            WebkitBoxShadow: "-1px 0px 5px 0px rgba(0,0,0,0.75)",
+            MozBoxShadow: "-1px 0px 5px 0px rgba(0,0,0,0.75)",
+            padding:'5px',
+            paddingLeft:"21px"
+            
     }
     return (
         <div className="filt" >

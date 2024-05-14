@@ -133,7 +133,10 @@
   width: 32%; /* Adjust width as needed */
   border-radius: 4px; /* Add border radius for rounded corners */
 }
-
+::placeholder{ 
+                color: #2979FF
+            }
+        
 .my-suggestions-list {
   list-style-type: none; /* Remove default list styles */
   padding: 0; /* Remove padding */
@@ -273,7 +276,7 @@ input{
     grid-row-gap: 0.05% ;
   }
   .country{
-    height: 450px;
+    height: 370px;
     
   }
   .details{
