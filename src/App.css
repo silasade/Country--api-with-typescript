@@ -310,8 +310,7 @@ input{
   .about,.bout{
     grid-template-columns: 90%;
     grid-row-gap: 10px;
-    word-wrap: break-word;
-    word-break: break-all;
+    
   }
   .flag2{
     width: 100%;
