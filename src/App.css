@@ -316,6 +316,11 @@ input{
 .countries{
   padding-top: 15px;
 }
+.my-suggestions-container {
+  
+  width: 92%; /* Adjust width as needed */
+  
+}
 }
 @media(max-width:420px){
   .country h5,.country{
@@ -331,11 +336,16 @@ input{
   .navbar h4{
     font-size: 11px;
 }
+.my-suggestions-container {
+  
+  width: 88%; /* Adjust width as needed */
+  
+}
 }
 
 @media(max-width:350px){
   .country h5,.country{
-    font-size: 15px;
+    font-size: 11px;
   }
   .navbar h3{
     font-size: 11px;
@@ -356,6 +366,11 @@ input{
 }
 .det h5{
   font-size: 10px;
+}
+.my-suggestions-container {
+  
+  width: 80%; /* Adjust width as needed */
+  
 }
 }
 
