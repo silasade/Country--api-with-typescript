@@ -298,7 +298,7 @@ input{
   .navbar h3{
     font-size: 15px;
   }
-  .navbar h4{
+  .navbar h4.country h5{
     font-size: 13px;
 
   }
@@ -321,6 +321,10 @@ input{
   width: 92%; /* Adjust width as needed */
   
 }
+.navbar h4,.country h5{
+  font-size: 13px;
+
+}
 }
 @media(max-width:420px){
   .country h5,.country{
@@ -335,6 +339,9 @@ input{
   }
   .navbar h4{
     font-size: 11px;
+}
+.navbar h4, .country h5{
+  font-size: 11px;
 }
 .my-suggestions-container {
   
