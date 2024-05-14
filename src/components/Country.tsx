@@ -31,9 +31,13 @@ export function Country(){
     const language=mine?.languages.map(item=>item.name)
     document.body.style.backgroundColor = themecontext?.theme? backgroundContext.light.secondary: backgroundContext.dark.secondary;
     function handleNavigate(){
+        localStorage.setItem("filter",JSON.stringify(false))
+
         setFilter(!Filter)
         navigate(-1)
     }
+    console.log(localStorage.getItem("filter"))
+
     return(
         <div className="about" style={{backgroundColor: themecontext?.theme? backgroundContext.light.secondary: backgroundContext.dark.secondary, color:themecontext?.theme? backgroundContext.light.primary:backgroundContext.light.secondary}}>
             <div>

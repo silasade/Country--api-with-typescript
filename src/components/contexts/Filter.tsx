@@ -13,9 +13,7 @@ export const FilterContext = createContext<AuthFilter | undefined>(undefined);
 
 export function FilterProvider({ children }: filterProps) {
     const [Filter, setFilter] = useState<boolean>(false);
-    useEffect(() => {        
-        localStorage.setItem('filter',JSON.stringify(Filter));
-    }, []);
+    
     return (
         <FilterContext.Provider value={{ Filter, setFilter }}>
             {children}

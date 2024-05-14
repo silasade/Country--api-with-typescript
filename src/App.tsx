@@ -19,35 +19,19 @@ function App() {
   if (!filterContext) {
       throw new Error("Region does not exist");
   }
-
-  const { Filter, setFilter } = filterContext;
-
-  useEffect(() => {
-      const handleStorageChange = (event: StorageEvent) => {
-          if (event.key === 'filter') {
-              const storedFilter = localStorage.getItem('filter');
-              if (storedFilter !== null) {
-                setShowFilter(!JSON.parse(storedFilter));
-              }
-          }
-      };
-
-      // Subscribe to changes in localStorage
-      window.addEventListener('storage', handleStorageChange);
-
-      // Unsubscribe when component unmounts
-      return () => {
-          window.removeEventListener('storage', handleStorageChange);
-      };
-  }, [filterContext.Filter]);
-  console.log(showFilter)
+  useEffect(()=>{
+    const show=(localStorage.getItem("filter"))
+    setShowFilter(show?JSON.parse(show): filterContext.Filter)
+  },[filterContext.Filter])
+  const show=localStorage.getItem("filter")
+  console.log(localStorage.getItem("filter"))
   return (
     <BrowserRouter>
       <ThemeContextProvider>
         <BackgroundContextProvider>
           <RegionContextProvider>
             <Navbar />
-            {filterContext.Filter && <Filters/>}
+            {!showFilter && <Filters/>}
             <Routes>
               <Route path='/' element={<Countries />} />
               <Route path='/Country' element={<Country />} />

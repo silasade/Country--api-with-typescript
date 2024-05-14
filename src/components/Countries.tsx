@@ -44,12 +44,15 @@ export const Countries=()=>{
     function handleCountry(item:Object){
         localStorage.setItem("Mycountry",JSON.stringify(item))
         setFilter(!Filter)
+        
+        localStorage.setItem("filter",JSON.stringify(true))
         navigate("/Country")
     }
     useEffect(()=>{
         
         localStorage.setItem("Countries",JSON.stringify(data))
     },[])
+    console.log(localStorage.getItem("filter"))
     const myCountries1=data.map((item,index)=>{
         return(
 
