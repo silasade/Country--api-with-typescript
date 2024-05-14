@@ -7,7 +7,7 @@ import { ThemeContext } from './contexts/ThemeContext';
 import { BackgroundContext } from './contexts/BackgroundContext';
 import { useNavigate } from 'react-router-dom';
 import Notification from './Notification';
-export const Filter = () => {
+export const Filters = () => {
     const themeContext = useContext(ThemeContext);
     const backgroundContext = useContext(BackgroundContext);
     const [value, setInput] = useState<string | null>(null);

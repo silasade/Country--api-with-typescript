@@ -2,10 +2,17 @@ import { useNavigate } from "react-router-dom"
 import { ThemeContext } from "./contexts/ThemeContext"
 import { BackgroundContext } from "./contexts/BackgroundContext"
 import { useContext } from "react"
+import { FilterContext } from "./contexts/Filter"
+
 export function Country(){
     const navigate=useNavigate()
     const themecontext=useContext(ThemeContext)
     const backgroundContext=useContext(BackgroundContext)
+    const filterContext=useContext(FilterContext)
+    if (!filterContext){
+        throw new Error("Region does not exist")
+    }
+    const {Filter, setFilter}=filterContext
     type mycountry={
         flag: string
         name: string
@@ -23,11 +30,15 @@ export function Country(){
     const currency=mine?.currencies.map(item=>item.name)
     const language=mine?.languages.map(item=>item.name)
     document.body.style.backgroundColor = themecontext?.theme? backgroundContext.light.secondary: backgroundContext.dark.secondary;
+    function handleNavigate(){
+        setFilter(!Filter)
+        navigate(-1)
+    }
     return(
         <div className="about" style={{backgroundColor: themecontext?.theme? backgroundContext.light.secondary: backgroundContext.dark.secondary, color:themecontext?.theme? backgroundContext.light.primary:backgroundContext.light.secondary}}>
             <div>
                 <div>
-                    <button onClick={()=>navigate(-1)}>Back</button>
+                    <button onClick={handleNavigate}>Back</button>
                     <br />
                     <br />
                 </div>

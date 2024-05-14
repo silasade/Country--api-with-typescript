@@ -4,7 +4,6 @@ import { AuthTheme } from "./contexts/ThemeContext";
 import { BackgroundContext } from "./contexts/BackgroundContext";
 import moon from "./images/moon.svg"
 import sun from "./images/brightness-high.svg"
-import { Filter } from "./Filter"
 
 function Navbar(){
     const themecontext=useContext(ThemeContext)

@@ -4,10 +4,17 @@ import { useContext, useEffect } from "react"
 import { ThemeContext } from "./contexts/ThemeContext"
 import { BackgroundContext } from "./contexts/BackgroundContext"
 import { useNavigate } from "react-router-dom"
+import { FilterContext } from "./contexts/Filter"
 export const Countries=()=>{
     const region=useContext(RegionContext)
     const themecontext=useContext(ThemeContext)
     const backgroundContext=useContext(BackgroundContext)
+    const filterContext=useContext(FilterContext)
+
+    if (!filterContext){
+        throw new Error("Region does not exist")
+    }
+    const {Filter, setFilter}=filterContext
     const navigate=useNavigate()
     if (!region){
         throw new Error("Region does not exist")
@@ -36,6 +43,7 @@ export const Countries=()=>{
     })
     function handleCountry(item:Object){
         localStorage.setItem("Mycountry",JSON.stringify(item))
+        setFilter(!Filter)
         navigate("/Country")
     }
     useEffect(()=>{

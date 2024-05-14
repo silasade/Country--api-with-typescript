@@ -108,6 +108,7 @@
   animation-fill-mode:  backwards;
   align-content: end;
   align-items: end;
+  padding-top: 200px;
 }
 .bout{
   align-self: center;
@@ -351,6 +352,9 @@ input{
   width: 100%;
   padding: 10px;
   padding-top: 150px;
+}
+.about{
+  padding-top: 100px;
 }
 }
 @media(max-width:420px){
