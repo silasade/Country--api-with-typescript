@@ -327,7 +327,7 @@ input{
     font-size: 15px;
   }
   .country{
-    height: 400px;
+    height: 370px;
     
   }
   .navbar h3{
@@ -371,6 +371,9 @@ input{
   
   width: 80%; /* Adjust width as needed */
   
+}
+.country{
+  height: 350px;
 }
 }
 
