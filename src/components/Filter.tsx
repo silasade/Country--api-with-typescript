@@ -76,6 +76,12 @@ export const Filters = () => {
         }
     };
     console.log(showNotification)
+    const style={
+        input:{
+            color:themeContext?.theme ? backgroundContext.light.primary : backgroundContext.light.secondary 
+
+        }
+    }
     return (
         <div className="filt" >
             <div className="filter" style={{ backgroundColor: themeContext?.theme ? backgroundContext.light.secondary : backgroundContext.dark.secondary, color: themeContext?.theme ? backgroundContext.light.primary : backgroundContext.light.secondary }}>
