@@ -55,9 +55,6 @@ export const Countries=()=>{
     console.log(localStorage.getItem("filter"))
     const myCountries1=data.map((item,index)=>{
         return(
-
-           
-
             <div className="country" style={{backgroundColor: themecontext?.theme? "white": backgroundContext.dark.primary}} key={index}>
                 <div>
                     <img className="flag" src={item.flags.png}/>

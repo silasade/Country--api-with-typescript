@@ -55,6 +55,8 @@ export const Filters = () => {
     };
     const handleKeyPress = (event:React.KeyboardEvent<HTMLElement>) => {
         if (event.key === 'Enter') {
+            localStorage.setItem("filter", JSON.stringify(true))
+
             let enteredValue:string
             if(typeof value==="string"){
                 enteredValue= value.trim().toLowerCase();
