@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 *{
   margin: 0;
   transition-duration: 1;
 }
-.det{
+.det, .det1{
   display: flex;
   gap: 5px;
   align-content: end;
@@ -104,6 +105,53 @@
 .domain{
   align-self: center;
 }
+.my-suggestions-list{
+  list-style: none;
+  
+}
+.my-suggestions-container {
+  position: absolute; /* Position suggestions absolutely */
+  z-index: 9999; /* Set a high z-index to ensure it appears on top */
+  background-color: gainsboro;
+  color: black;
+  width: 32%; /* Adjust width as needed */
+  border-radius: 4px; /* Add border radius for rounded corners */
+}
+
+.my-suggestions-list {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  max-height: 200px; /* Set max height to enable scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.my-suggestion {
+  
+  padding: 8px 16px; /* Add padding to suggestions for better readability */
+  cursor: pointer; /* Add pointer cursor for hover effect */
+}
+
+/* Adjust other styles as needed */
+
+.my-suggestions-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  margin: 2px;
+  z-index: -100;
+}
+.my-suggestion{
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.75);
+  
+}
+input{
+  width: 70%;
+}
 @media(max-width:1120px){
   .flag2{
     width: 90%;
@@ -197,15 +245,19 @@
 @media(max-width:609px){
   .countries{
     justify-content: center;
-    grid-template-columns: 95%;  
+    grid-template-columns: 98%;  
     grid-column-gap: 5%;
     grid-row-gap: 0.05% ;
   }
   .country{
-    height: 350px;
+    height: 420px;
+    
   }
-  .country h5{
-    font-size: 10px;
+  .details{
+    padding: 30px;
+  }
+  .country h5,.country{
+    font-size: 20px;
   }
   .flag{
     height: 200px;
@@ -246,6 +298,48 @@
 
   }
 }
+@media(max-width:420px){
+  .country h5,.country{
+    font-size: 20px;
+  }
+  .country{
+    height: 400px;
+    
+  }
+  .navbar h3{
+    font-size: 13px;
+  }
+  .navbar h4{
+    font-size: 11px;
+}
+}
+
+@media(max-width:350px){
+  .country h5,.country{
+    font-size: 15px;
+  }
+  .navbar h3{
+    font-size: 11px;
+  }
+  .navbar h4{
+    font-size: 11px;
+}
+.countries{
+  padding-top: 20px;
+}
+.filt{
+  padding: 20px;
+
+  grid-row-gap: 20px;
+  grid-template-columns: 99%;
+  justify-content: center;
+
+}
+.det h5{
+  font-size: 10px;
+}
+}
+
 @keyframes anime {
   from{transform: translateX(-1200px)}
   to{transform: translateX(0px)}

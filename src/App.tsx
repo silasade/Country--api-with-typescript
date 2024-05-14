@@ -15,6 +15,7 @@ function App() {
     <ThemeContextProvider>
       <BackgroundContextProvider>
         <RegionContextProvider>
+          
         <Navbar/>
           <Routes>
           <Route path='/' element={<Filter/>} />

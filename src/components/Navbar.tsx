@@ -1,5 +1,5 @@
 import { ThemeContext } from "./contexts/ThemeContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthTheme } from "./contexts/ThemeContext";
 import { BackgroundContext } from "./contexts/BackgroundContext";
 import moon from "./images/moon.svg"

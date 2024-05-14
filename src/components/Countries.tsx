@@ -12,7 +12,6 @@ export const Countries=()=>{
     if (!region){
         throw new Error("Region does not exist")
     }
-    console.log(region.regions)
     const filter=data.filter((item)=>{
         return item && item.region===region.regions?.region
     })
@@ -40,9 +39,9 @@ export const Countries=()=>{
         navigate("/Country")
     }
     useEffect(()=>{
+        
         localStorage.setItem("Countries",JSON.stringify(data))
     },[])
-    console.log(localStorage.getItem("Mycountry"))
     const myCountries1=data.map((item,index)=>{
         return(
             <div className="country" style={{backgroundColor: themecontext?.theme? "white": backgroundContext.dark.primary}} key={index}>
@@ -54,9 +53,9 @@ export const Countries=()=>{
                         <h4 onClick={()=>handleCountry(item)} className="name">{item.name}</h4>
                     </div>
                     <div>
-                        <div className="det">Population:<h5>{item.population}</h5></div>
-                       <div className="det">Region:<h5>{item.region}</h5></div>
-                       <div className="det">Capital:<h5>{item.capital}</h5></div>
+                        <div className="det1">Population:<h5>{item.population}</h5></div>
+                       <div className="det1">Region:<h5>{item.region}</h5></div>
+                       <div className="det1">Capital:<h5>{item.capital}</h5></div>
                     </div>
                 </div>
             </div>
