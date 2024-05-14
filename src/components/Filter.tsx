@@ -76,11 +76,11 @@ export const Filters = () => {
         }
     };
     console.log(showNotification)
-    const style={
-        input:{
+    const style: React.CSSProperties | undefined={
+       
             color:themeContext?.theme ? backgroundContext.light.primary : backgroundContext.light.secondary 
 
-        }
+        
     }
     return (
         <div className="filt" >
@@ -101,6 +101,7 @@ export const Filters = () => {
                             suggestion: 'my-suggestion'
                         }}
                         inputProps={{
+                            style:style,
                             placeholder: 'Type a country...',
                             value: value || "",
                             onKeyPress: handleKeyPress,
