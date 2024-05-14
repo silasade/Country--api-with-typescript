@@ -11,7 +11,7 @@ It is a web app that shows the different countries of the world
   4. User can click the Name of a country to know more about the country
 
 ## Live
-Visit the Live website [here](country-api-with-typescript.vercel.app)
+Visit the Live website [here](https://country-api-with-typescript.vercel.app/)
 
 ### `Installation`
   To run the project locally, follow the following steps:
