@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was created with [React JS](https://react.dev/).\
+This project was created with [React JS](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/docs/handbook/react.html).\
 It is a web app that shows the different countries of the world
 
 ## Features
