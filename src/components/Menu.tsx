@@ -11,7 +11,7 @@ export const Menu=({country}:MenuProps)=>{
     const themecontext=useContext(ThemeContext)
     const backgroundContext=useContext(BackgroundContext)
     const region=country.map((item,index)=> {
-        return <Dropdown.Item style={{color:themecontext?.theme? backgroundContext.light.primary:backgroundContext.light.secondary}} key={index} onClick={()=>handleRegions(item)}>{item}</Dropdown.Item>
+        return <Dropdown.Item className='item' style={{color:themecontext?.theme? backgroundContext.light.primary:backgroundContext.light.secondary}} key={index} onClick={()=>handleRegions(item)}>{item}</Dropdown.Item>
     })
     if(!regionContext){
         throw new Error('region does not exist')
@@ -27,7 +27,7 @@ export const Menu=({country}:MenuProps)=>{
             Filter by Region
         </Dropdown.Toggle>
   
-        <Dropdown.Menu style={{backgroundColor: themecontext?.theme? "white": backgroundContext.dark.primary, border:"0", color:themecontext?.theme? backgroundContext.light.primary:backgroundContext.light.secondary}}>
+        <Dropdown.Menu className='item' style={{backgroundColor: themecontext?.theme? "white": backgroundContext.dark.primary, border:"0", color:themecontext?.theme? backgroundContext.light.primary:backgroundContext.light.secondary}}>
           {region}
           
         </Dropdown.Menu>
