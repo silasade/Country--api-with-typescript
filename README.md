@@ -10,7 +10,7 @@ It is a web app that shows the different countries of the world
   3. Filter: User can filter according to different regions of the world
   4. User can click the Name of a country to know more about the country
 
-## Live
+## Hosted
 Visit the Live website [here](https://country-api-with-typescript.vercel.app/)
 
 ### `Installation`
