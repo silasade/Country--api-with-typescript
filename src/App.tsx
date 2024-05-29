@@ -16,6 +16,7 @@ function App() {
   const filterContext = useContext(FilterContext);
   const [showFilter, setShowFilter] = useState<boolean|undefined>();
   if (!filterContext) {
+    
       throw new Error("Region does not exist");
   }
   useEffect(()=>{
