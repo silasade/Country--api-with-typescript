@@ -12,7 +12,6 @@ import { Country } from './components/Country';
 import { Countries } from './components/Countries';
 import { useEffect,useState,useContext } from 'react';
 import { FilterContext } from "./components/contexts/Filter"
-import { Filters } from './components/Filter';
 function App() {
   const filterContext = useContext(FilterContext);
   const [showFilter, setShowFilter] = useState<boolean|undefined>();
